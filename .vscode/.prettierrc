@@ -1,0 +1,10 @@
+{
+  "endOfLine": "lf",
+  "proseWrap": "preserve",
+  "printWidth": 120,
+  "semi": false,
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "quoteProps": "consistent",
+  "jsxBracketSameLine": true
+}

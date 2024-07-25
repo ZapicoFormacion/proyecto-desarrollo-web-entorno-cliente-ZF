@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IFCD0210: Proyecto Desarrollo Web</title>
+    <style>
+      body {
+        background-color: lightgray;
+        color: black;
+      }
+      h1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>IFCD0210: Proyecto Desarrollo Web</h1>
+    <p>Si el proyecto no carga automáticamente, acceda mediante <a href="./proyecto/">este enlace</a>.</p>
+    <p>También se incluyen algunas <a href="./proyecto-capturas/">capturas del proyecto en funcionamiento</a>.</p>
+    <p>El proyecto debería cargarse en <span id="timer">?</span> segundos.</p>
+  </body>
+  <script>
+    let tiempoRestante = 15 // Unidades de tiempo restante
+    document.getElementById('timer').textContent = tiempoRestante
+    const intervalo = setInterval(() => {
+      if (tiempoRestante > 1) document.getElementById('timer').textContent = --tiempoRestante
+      else {
+        clearInterval(intervalo)
+        window.location.href = './proyecto/'
+      }
+    }, 1000) // Intervalo en milisegundos
+  </script>
+</html>

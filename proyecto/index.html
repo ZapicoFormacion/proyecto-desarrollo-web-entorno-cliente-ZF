@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>IFCD0210: Proyecto Desarrollo Web</title>
+    <link rel="stylesheet" href="./css/base.css" />
+    <script defer src="./js/validity.js"></script>
+    <script defer src="./js/app.js"></script>
+  </head>
+  <body>
+    <div id="ficha">
+      <header>
+        <!-- Sí, el enlace del icono va a la raíz a propósito -->
+        <a href="/"><img src="./img/icono.png" alt="Icono" /></a>
+        <span>
+          TOTAL:<br />
+          <span><span id="precioTotal">0.00</span>€</span>
+        </span>
+      </header>
+      <form>
+        <div>
+          <label for="nombre">Nombre:</label><br />
+          <input type="text" required id="nombre" placeholder="Producto o artículo" /><br />
+          <label for="precio">Precio:</label><br />
+          <input type="number" required id="precio" step="0.01" min="0.01" placeholder="Cantidad en euros" /><br />
+          <label for="imagen">Imagen:</label><br />
+          <input type="text" required id="imagen" placeholder="https://tienda.com/producto.jpg" /><br />
+          <input type="hidden" id="index" />
+        </div>
+        <div>
+          <label for="descipción">Descripción:</label><br />
+          <textarea required id="descripción" placeholder="Texto descriptivo del producto o artículo"></textarea>
+        </div>
+        <div>
+          <button type="submit" id="aceptar">Aceptar</button>
+          <button type="reset" id="cancelar">Cancelar</button>
+        </div>
+      </form>
+      <section></section>
+    </div>
+  </body>
+</html>
